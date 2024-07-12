@@ -2706,4 +2706,8 @@ footer .copyright span:last-child::after {
 	background: #000000;
 }
 
+text-highlight {
+	color: #ff0077;
+}
+
 /*# sourceMappingURL=main.css.map */
