@@ -339,13 +339,20 @@
 						class="button stroke smoothscroll"
 						>Hire Me</a
 					> -->
-					<a
+					<!-- <a
 						href="https://drive.google.com/file/d/1tbY7DUw2t7HG3t49_W8RN9Auic2DUSV-/view?usp=sharing"
 						target="_blank"
 						title="Download CV"
 						class="button button-primary"
 						>Download CV</a
+					> -->
+
+					<button
+						class="button button-primary"
+						onclick="window.location.href='pdf.html'"
 					>
+						Preview CV
+					</button>
 				</div>
 			</div>
 		</section>
@@ -839,6 +846,25 @@
 		</section>
 		<!-- /portfolio -->
 
+		<!-- PDF Preview Section
+		<section
+			id="pdf-preview"
+			style="display: none"
+		>
+			<div class="row section-intro">
+				<div class="col-twelve">
+					<h5>PDF Preview</h5>
+					<h1>Resume/CV Preview</h1>
+					<iframe
+						id="pdfFrame"
+						src=""
+						width="100%"
+						height="600px"
+					></iframe>
+				</div>
+			</div>
+		</section> -->
+
 		<!-- footer
    ================================================== -->
 
@@ -879,5 +905,16 @@
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			function showPDF() {
+				var pdfSection = document.getElementById("pdf-preview");
+				var pdfFrame = document.getElementById("pdfFrame");
+				pdfFrame.src = "./Reeve_s_Resume.pdf"; // Update this path to the location of your PDF file
+				pdfSection.style.display = "block";
+				pdfFrame.onload = function () {
+					window.scrollTo(0, document.getElementById("pdf-preview").offsetTop);
+				};
+			}
+		</script>
 	</body>
 </html>
